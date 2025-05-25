@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOST & FOUND</title>
+    <link rel="stylesheet" href="index.css" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Centered Heading Positioned Separately -->
+    <h1 class="main-heading" id="mainHeading">
+        <span style="color: yellow;">LOST</span>
+        <span style="color: white;">&</span>
+        <span style="color: aqua;">FOUND</span>
+    </h1>
+
+    <!-- Login container -->
+    <div class="login-container" id="loginContainer">
+        <h2>LOGIN:</h2>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button id="loginBtn">Enter</button>
+    </div>
+
+    <!-- Success message -->
+    <div class="success-message" id="successMessage" style="display: none;">
+        <h2>Login Successful</h2>
+    </div>
+
+    <!-- Dashboard (Displayed after login) -->
+    <div class="dashboard" id="dashboard" style="display: none;">
+        <div class="welcome-section">
+            <h2 class="welcome-message" id="welcomeMessage" style="color: black;"></h2>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search" oninput="showSuggestions(this.value)">
+            <ul class="suggestions-list" id="suggestionsList"></ul>
+        </div>
+
+        <div class="feature-boxes">
+            <div class="feature-box">
+                <i class="fas fa-map-marker-alt icon-orange"></i>
+                <p>Item<br>Lost/Found</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-location-dot icon-blue"></i>
+                <p>Near me</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-briefcase icon-orange"></i>
+                <p>My<br>Belongings</p>
+            </div>
+        </div>
+
+        <button class="guest-login">G</button>
+
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+        <div class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Tokens</a></li>
+                <li><a href="#">Privacy & Security</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
